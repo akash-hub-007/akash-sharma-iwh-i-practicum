@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+  div.container
+    h1 Custom Object Table
+    a(href="/update-cobj") Add/Update This Table
+    br
+    br
+    table(border="1")
+      thead
+        tr
+          th Name
+          th Type
+          th Storage
+      tbody
+        each record in data
+          tr
+            td= record.properties.name
+            td= record.properties.type
+            td= record.properties.storage
